@@ -4,13 +4,49 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "compile": "rimraf dist/lib && tsc && tsc --build tsconfig.es5.json"
+        "compile": "rimraf dist/lib && tsc && tsc --build tsconfig.es5.json",
+        "release": "release-it"
     },
     "keywords": [],
     "author": "CodingButter <jamienichols@codingbutter.com>",
     "license": "ISC",
     "devDependencies": {
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^17.7.0",
+        "@release-it/conventional-changelog": "^7.0.1",
+        "husky": "^8.0.3",
         "rimraf": "^5.0.1",
         "typescript": "^5.2.2"
+    },
+    "release-it": {
+        "git": {
+            "tagName": "v${version}",
+            "commitMessage": "chore: release v${version}"
+        },
+        "github": {
+            "release": true
+        },
+        "npm": {
+            "publish": false
+        },
+
+        "plugins": {
+            "@release-it/conventional-changelog": {
+                "infile": "CHANGELOG.md",
+                "preset": {
+                    "name": "conventionalcommits",
+                    "types": [
+                        {
+                            "type": "feat",
+                            "section": "Features"
+                        }, {
+                            "type:": "fix",
+                            "section": "Bug Fixes"
+                        }
+                    ]
+                }
+            }
+        }
     }
+
 }
