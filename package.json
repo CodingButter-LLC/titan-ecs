@@ -1,0 +1,16 @@
+{
+    "name": "@codingbutter/titan-esc",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile": "rimraf dist/lib && tsc && tsc --build tsconfig.es5.json"
+    },
+    "keywords": [],
+    "author": "CodingButter <jamienichols@codingbutter.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "rimraf": "^5.0.1",
+        "typescript": "^5.2.2"
+    }
+}

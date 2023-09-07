@@ -1,0 +1,29 @@
+{
+    "name": "@codingbutter/titan-esc",
+    "version": "1.0.0",
+    "description": "A simple ESC library for the Titan Engine",
+    "main": "lib/es5/index.js",
+    "module": "lib/es6/index.js",
+    "sideEffects": false,
+
+    "repository": {
+        "type": "git",
+        "url": "git@codingbutter.github.com:codingbutter/titan-esc.git"
+    },
+    "files": [
+        "lib",
+        "CHANGELOG.md",
+        "LICENSE",
+        "package.json",
+        "README.md"
+    ],
+    "keywords": [
+        "javascript", "ECS", "Entity Component System"
+    ],
+    "author": "CodingButter",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/codingbutter/titan-esc/issues"
+    },
+    "homepage": "https://github.com/codingbutter/titan-esc#readme"
+}
